@@ -1,0 +1,21 @@
+{
+  "extends": "@adonisjs/tsconfig/tsconfig.app.json",
+  "compilerOptions": {
+    "rootDir": "./",
+    "jsx": "react",
+    "outDir": "./build",
+    "paths": {
+      "@generated/*": ["./.adonisjs/client/*"],
+      "~/*": ["./inertia/*"]
+    }
+  },
+  "exclude": [
+    "docs/**",
+    "inertia/**",
+    "tests/unit/tab_session_service.spec.ts",
+    "app/models/tab.ts",
+    "app/models/tab_member.ts",
+    "app/services/tab_session_service.ts"
+  ],
+  "references": [{ "path": "./tsconfig.inertia.json" }]
+}
